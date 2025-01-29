@@ -18,13 +18,10 @@ public class Calculator {
     }
 
     public static int divide(int a, int b){
-        try{
-            return a/b;
+        if (b == 0) {
+            throw new ArithmeticException("Ділення на нуль неможливе");
         }
-        catch (ArithmeticException e){
-            System.out.println("Exception: "+e.getMessage());
-            return 0;
-        }
+      return a/b;
     }
 
     public static int multiply(int a, int b){
